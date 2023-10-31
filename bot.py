@@ -209,7 +209,6 @@ async def button_press(update, context):
         f"**Default engine:** `{config.GPT_ENGINE}`\n"
         f"**temperature:** `{config.temperature}`\n"
         f"**API_URL:** `{config.API_URL}`\n\n"
-        f"**API:** `{config.API}`\n\n"
         f"**WEB_HOOK:** `{config.WEB_HOOK}`\n\n"
     )
     callback_query = update.callback_query
@@ -226,7 +225,6 @@ async def button_press(update, context):
                 f"**Default engine:** `{config.GPT_ENGINE}`\n"
                 f"**temperature:** `{config.temperature}`\n"
                 f"**API_URL:** `{config.API_URL}`\n\n"
-                f"**API:** `{config.API}`\n\n"
                 f"**WEB_HOOK:** `{config.WEB_HOOK}`\n\n"
             )
             message = await callback_query.edit_message_text(
@@ -260,7 +258,6 @@ async def button_press(update, context):
             f"**Default engine:** `{config.GPT_ENGINE}`\n"
             f"**temperature:** `{config.temperature}`\n"
             f"**API_URL:** `{config.API_URL}`\n\n"
-            f"**API:** `{config.API}`\n\n"
             f"**WEB_HOOK:** `{config.WEB_HOOK}`\n\n"
         )
         message = await callback_query.edit_message_text(
@@ -280,7 +277,6 @@ async def button_press(update, context):
             f"**Default engine:** `{config.GPT_ENGINE}`\n"
             f"**temperature:** `{config.temperature}`\n"
             f"**API_URL:** `{config.API_URL}`\n\n"
-            f"**API:** `{config.API}`\n\n"
             f"**WEB_HOOK:** `{config.WEB_HOOK}`\n\n"
         )
 
@@ -303,7 +299,6 @@ async def button_press(update, context):
             f"**Default engine:** `{config.GPT_ENGINE}`\n"
             f"**temperature:** `{config.temperature}`\n"
             f"**API_URL:** `{config.API_URL}`\n\n"
-            f"**API:** `{config.API}`\n\n"
             f"**WEB_HOOK:** `{config.WEB_HOOK}`\n\n"
         )
         message = await callback_query.edit_message_text(
@@ -323,7 +318,6 @@ async def button_press(update, context):
             f"**Default engine:** `{config.GPT_ENGINE}`\n"
             f"**temperature:** `{config.temperature}`\n"
             f"**API_URL:** `{config.API_URL}`\n\n"
-            f"**API:** `{config.API}`\n\n"
             f"**WEB_HOOK:** `{config.WEB_HOOK}`\n\n"
         )
         message = await callback_query.edit_message_text(
@@ -343,7 +337,6 @@ async def button_press(update, context):
             f"**Default engine:** `{config.GPT_ENGINE}`\n"
             f"**temperature:** `{config.temperature}`\n"
             f"**API_URL:** `{config.API_URL}`\n\n"
-            f"**API:** `{config.API}`\n\n"
             f"**WEB_HOOK:** `{config.WEB_HOOK}`\n\n"
         )
         message = await callback_query.edit_message_text(
@@ -359,7 +352,6 @@ async def info(update, context):
         f"**Default engine:** `{config.GPT_ENGINE}`\n"
         f"**temperature:** `{config.temperature}`\n"
         f"**API_URL:** `{config.API_URL}`\n\n"
-        f"**API:** `{config.API}`\n\n"
         f"**WEB_HOOK:** `{config.WEB_HOOK}`\n\n"
     )
     message = await context.bot.send_message(chat_id=update.message.chat_id, text=escape(info_message), reply_markup=InlineKeyboardMarkup(first_buttons), parse_mode='MarkdownV2', disable_web_page_preview=True)
@@ -431,8 +423,7 @@ async def start(update, context): # 当用户输入/start时，返回文本
     user = update.effective_user
     message = (
         "我是人见人爱的 ChatGPT~\n\n"
-        "欢迎访问 https://github.com/yym68686/ChatGPT-Telegram-Bot 查看源码\n\n"
-        "有 bug 可以联系 @yym68686"
+        "有 bug 可以联系 老诸"
     )
     await update.message.reply_html(rf"Hi {user.mention_html()} ! I am an Assistant, a large language model trained by OpenAI. I will do my best to help answer your questions.",)
     await update.message.reply_text(escape(message), parse_mode='MarkdownV2', disable_web_page_preview=True)
